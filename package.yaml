@@ -1,0 +1,101 @@
+name:                tongues
+version:             0.1.0.0
+github:              "tongues.org"
+license:             BSD3
+author:              ""
+maintainer:          ""
+copyright:           "Matt Parker"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the readme
+
+dependencies:
+  - attoparsec
+  - base >= 4.7 && < 5
+  - bimap
+  - containers
+  - envy
+  - google-translate
+  - http-client
+  - http-client-tls
+  - lens
+  - mtl
+  - newtype
+  - protolude
+  - random
+  - raw-strings-qq
+  - stm
+  - string-conversions
+  - text
+  - transformers
+  - uuid
+
+default-extensions:
+  - DeriveDataTypeable
+  - DeriveFoldable
+  - DeriveFunctor
+  - DeriveGeneric
+  - DeriveTraversable
+  - DuplicateRecordFields
+  - FlexibleContexts
+  - FlexibleInstances
+  - FunctionalDependencies
+  - GADTs
+  - GeneralizedNewtypeDeriving
+  - LambdaCase
+  - MultiParamTypeClasses
+  - NoImplicitPrelude   
+  - OverloadedStrings
+  - ScopedTypeVariables
+  - StandaloneDeriving
+#  - StrictData
+  - TupleSections
+  - TypeFamilies
+
+  
+library:
+  ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wredundant-constraints
+  - -j
+  - +RTS
+  - -s
+  - -A256m
+  - -n16m
+  - -RTS
+  source-dirs: src
+  exposed-modules:
+  - Tongues.Prelude
+  
+  
+include-dirs:
+  - "src"
+
+# tests:
+#   blaze-test:
+#     main: Spec.hs
+#     source-dirs:
+#     - test
+#     ghc-options:
+#     - -Wall
+#     - -threaded
+#     - -rtsopts
+#     - -with-rtsopts=-N
+#     dependencies:
+#     - containers
+#     - tongues
+#     - hspec
+#     - text

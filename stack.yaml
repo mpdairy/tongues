@@ -1,0 +1,10 @@
+resolver: lts-14.14
+compiler: ghc-8.6.5
+
+packages:
+- .
+
+extra-deps:
+- git: git@github.com:mpdairy/google-translate.git
+  commit: 12c21c57a27f12ea71d6a76455e8a1471165bb48
+ 
